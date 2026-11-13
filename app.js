@@ -11,6 +11,7 @@ app.use(morgan('dev'));
 mongoose
   .connect(mongoUri)
   .then(() => {
+    console.log('MongoDB connected');
     app.listen(port, () => {
       console.log(`Server listening on port ${port}`);
     });
